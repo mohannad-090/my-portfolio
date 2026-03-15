@@ -53,12 +53,17 @@
     </a>
   </div>
   <section class="hero section-animate" id="home">
+    <img src="images/me.jpeg" alt="Hero Image">
     <div class="hero-text">
       <h1 class="gradient-text">I Build Modern Websites</h1>
       <p>Frontend Developer</p>
-      <button onclick="scrollProjects()">View Projects</button>
+      <div class="hero-btn">
+        <button onclick="scrollProjects()">View Projects</button>
+        <a href="https://drive.google.com/file/d/1ncwznCYB2ijiQR2nTGS5F5cWw0-hcPW6/view?usp=drivesdk" target="_blank">
+          <button>View My CV</button>
+        </a>
+      </div>
     </div>
-    <img src="images/me.jpeg" alt="Hero Image">
   </section>
   <section class="about section-animate" id="about">
     <h2 class="gradient-text">About Me</h2>
@@ -79,14 +84,10 @@
   </section>
   <section class="certificates section-animate" id="certificates">
     <h2 class="gradient-text">Certificates</h2>
-    <div class="cert-grid">
+    <div class="cert-flex">
       <div class="cert">
-        <img src="images/certificate.jpeg">
-        <p>Frontend Development</p>
-      </div>
-      <div class="cert">
-        <img src="images/certificate.jpeg">
-        <p>JavaScript Certificate</p>
+        <img src="images/nti.jpeg">
+        <p>Web Development Certificate – NTI</p>
       </div>
       <div class="cert">
         <img src="images/certificate.jpeg">
@@ -146,7 +147,7 @@
         <a href="#" target="_blank" class="social-linkedin">
           <img src="images/linkedin.png" alt="LinkedIn"/>
         </a>
-        <h4>John Doe</h4>
+        <h4>Mahmoud Magdy</h4>
       </div>
       <div class="testimonial-card">
         <img class="client" src="images/man-suit-with-blue-shirt-glasses_1268911-264.avif" alt="Client Image">
@@ -155,7 +156,7 @@
         <a href="#" target="_blank" class="social-linkedin">
           <img src="images/linkedin.png" alt="LinkedIn"/>
         </a>
-        <h4>Jane Smith</h4>
+        <h4>Omar Ahmed</h4>
       </div>
     </div>
   </section>
@@ -178,17 +179,17 @@
   </section>
   <section class="contact section-animate" id="contact">
     <h2 class="gradient-text">Contact Me</h2>
-    <form>
+    <form action="https://formsubmit.co/mohanadosama176@gmail.com" method="POST">
       <div class="form-group">
-        <input type="text" required placeholder=" "/>
+        <input type="text" name="name" required placeholder=" "/>
         <label>Name</label>
       </div>
       <div class="form-group">
-        <input type="email" required placeholder=" "/>
+        <input type="email" name="email" required placeholder=" "/>
         <label>Email</label>
       </div>
       <div class="form-group">
-        <textarea required placeholder=" "></textarea>
+        <textarea name="message" required placeholder=" "></textarea>
         <label>Message</label>
       </div>
       <button type="submit">Send</button>
@@ -199,7 +200,4 @@
   </footer>
   <script src="script.js"></script>
 </body>
-
 </html>
-
-
