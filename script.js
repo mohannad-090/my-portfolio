@@ -267,7 +267,7 @@ const projects = {
       ar: "Portfolio"
     },
 
-    image: "images/portfolio.jpeg",
+    image: "images/portfolio.png",
 
     description: {
       en: "A modern responsive portfolio website showcasing projects, skills, education, and contact information using HTML, CSS, and JavaScript.",
