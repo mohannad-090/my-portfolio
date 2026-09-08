@@ -139,53 +139,108 @@ function setLanguage(language) {
 
 const savedLanguage =
   localStorage.getItem("portfolio-language") || "en";
-
-setLanguage(savedLanguage);
-
+  
+  setLanguage(savedLanguage);  
+  
 if (languageToggle) {
-
+  
   languageToggle.addEventListener("click", () => {
 
     const currentLanguage =
       localStorage.getItem("portfolio-language") || "en";
 
-    setLanguage(currentLanguage === "en" ? "ar" : "en");
+    setLanguage(currentLanguage === "en" ? "ar" : "en");  
 
-  });
+  });  
 
-}
+}  
 
 
 /* =====================================================
    PROJECT DATA
-===================================================== */
-
-const projects = {
-
+   ===================================================== */   
+   
+   const projects = {
+    technostore: {
+      title: {
+        en: "Techno Store - E-Commerce Website",
+        ar: "Techno Store - متجر إلكتروني"
+      },
+    
+      category: {
+        en: "E-Commerce Website",
+        ar: "متجر إلكتروني"
+      },
+    
+      image: "images/TechnoStore.png",
+    
+      description: {
+        en: "A modern and responsive e-commerce website for electronics and technology products, featuring product browsing, shopping cart functionality, checkout, authentication, promotional offers, and customer testimonials.",
+        ar: "متجر إلكتروني عصري ومتجاوب لمنتجات الإلكترونيات والتكنولوجيا، يحتوي على تصفح المنتجات وسلة المشتريات وإتمام الطلب وتسجيل الدخول والعروض الترويجية وآراء العملاء."
+      },
+    
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+    
+      features: {
+        en: [
+          "Responsive e-commerce design",
+          "Product listing and categories",
+          "Product details",
+          "Shopping cart functionality",
+          "Checkout page",
+          "Login page",
+          "Best-selling products section",
+          "Special offers and promotions",
+          "Customer testimonials",
+          "Mobile-friendly navigation"
+        ],
+    
+        ar: [
+          "تصميم متجر إلكتروني متجاوب",
+          "عرض المنتجات والتصنيفات",
+          "صفحات تفاصيل المنتجات",
+          "سلة مشتريات تفاعلية",
+          "صفحة إتمام الطلب",
+          "صفحة تسجيل الدخول",
+          "قسم المنتجات الأكثر مبيعًا",
+          "العروض والخصومات",
+          "آراء العملاء",
+          "قائمة تنقل متوافقة مع الهواتف"
+        ]
+      },
+    
+      live: "https://mohannad-090.github.io/TechnoStore/"
+    },
+    
+     
   ecommerce: {
 
     title: {
       en: "E-commerce Website",
       ar: "موقع تجارة إلكترونية"
-    },
-
+    },  
+    
     category: {
       en: "Web Development",
       ar: "تطوير الويب"
-    },
-
+    },  
+    
     image: "images/E-commerce.jpeg",
 
     description: {
       en: "A responsive e-commerce store interface with product listing and shopping cart functionality, built using HTML, CSS, and JavaScript.",
       ar: "واجهة متجر إلكتروني متجاوبة تحتوي على عرض المنتجات ووظائف عربة التسوق، وتم تطويرها باستخدام HTML وCSS وJavaScript."
-    },
+    },  
 
     technologies: [
-      "HTML5",
-      "CSS3",
+      "HTML",
+      "CSS",
       "JavaScript"
-    ],
+    ],  
 
     features: {
       en: [
@@ -193,66 +248,20 @@ const projects = {
         "Product listing",
         "Shopping cart functionality",
         "Modern user interface"
-      ],
+      ],  
 
       ar: [
         "واجهة متجاوبة",
         "عرض المنتجات",
         "وظائف عربة التسوق",
         "واجهة مستخدم عصرية"
-      ]
-    },
+      ]  
+    },  
 
     live:
       "https://mohannad-090.github.io/WLZ-Store/"
 
-  },
-
-
-  landing: {
-
-    title: {
-      en: "Modern Landing Page Website",
-      ar: "موقع Landing Page عصري"
-    },
-
-    category: {
-      en: "Web Design",
-      ar: "تصميم مواقع"
-    },
-
-    image: "images/Modern-Landing.jpeg",
-
-    description: {
-      en: "A modern landing page built using HTML and CSS with responsive design and a clean user interface.",
-      ar: "صفحة هبوط عصرية تم تطويرها باستخدام HTML وCSS مع تصميم متجاوب وواجهة مستخدم نظيفة."
-    },
-
-    technologies: [
-      "HTML5",
-      "CSS3"
-    ],
-
-    features: {
-      en: [
-        "Responsive design",
-        "Clean UI",
-        "Modern layout",
-        "Mobile-friendly structure"
-      ],
-
-      ar: [
-        "تصميم متجاوب",
-        "واجهة نظيفة",
-        "تخطيط عصري",
-        "متوافق مع الهواتف"
-      ]
-    },
-
-    live:
-      "https://mohannad-090.github.io/project1/"
-
-  },
+  },    
 
 
   portfolio: {
@@ -260,25 +269,25 @@ const projects = {
     title: {
       en: "Personal Portfolio Website",
       ar: "موقع Portfolio شخصي"
-    },
+    },  
 
     category: {
       en: "Portfolio",
       ar: "Portfolio"
-    },
+    },  
 
     image: "images/portfolio.png",
 
     description: {
       en: "A modern responsive portfolio website showcasing projects, skills, education, and contact information using HTML, CSS, and JavaScript.",
       ar: "موقع Portfolio شخصي عصري ومتجاوب يعرض المشاريع والمهارات والتعليم وبيانات التواصل باستخدام HTML وCSS وJavaScript."
-    },
+    },  
 
     technologies: [
-      "HTML5",
-      "CSS3",
+      "HTML",
+      "CSS",
       "JavaScript"
-    ],
+    ],  
 
     features: {
       en: [
@@ -286,20 +295,121 @@ const projects = {
         "Modern portfolio design",
         "Projects showcase",
         "Contact section"
-      ],
+      ],  
 
       ar: [
         "تصميم متجاوب",
         "تصميم Portfolio عصري",
         "عرض المشاريع",
         "قسم للتواصل"
-      ]
-    },
+      ]  
+    },  
 
     live:
       "https://mohannad-090.github.io/my-portfolio/"
 
-  }
+  },    
+
+  
+  decor: {
+    title: {
+      en: "DECOR - Interior Design Portfolio",
+      ar: "DECOR - بورتفوليو تصميم داخلي"
+    },
+    category: {
+      en: "Web Development",
+      ar: "تطوير مواقع"
+    },
+    image: "images/decor.png",
+    description: {
+      en: "A professional portfolio website developed for an interior designer to showcase her previous projects, services, experience, and design work through a modern and responsive interface.",
+      ar: "موقع بورتفوليو احترافي تم تطويره لمهندسة ديكور لعرض مشاريعها السابقة وخدماتها وخبرتها وأعمال التصميم من خلال واجهة عصرية ومتجاوبة."
+    },
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    features: {
+      en: [
+        "Responsive design",
+        "Modern and elegant UI",
+        "Hero image slider",
+        "Services showcase",
+        "Previous projects gallery",
+        "Project category filtering",
+        "About section with statistics",
+        "Contact form",
+        "Social media integration",
+        "Scroll reveal animations"
+      ],
+      ar: [
+        "تصميم متجاوب",
+        "واجهة عصرية وأنيقة",
+        "Slider للصور",
+        "عرض الخدمات",
+        "معرض للمشاريع السابقة",
+        "فلترة المشاريع حسب التصنيف",
+        "قسم نبذة مع الإحصائيات",
+        "نموذج للتواصل",
+        "دمج وسائل التواصل الاجتماعي",
+        "تأثيرات ظهور أثناء التمرير"
+      ]
+    },
+    live: "https://mohannad-090.github.io/p/"
+  },
+  
+
+  cleanride: {
+    title: {
+      en: "CleanRide - Car Wash Website",
+      ar: "CleanRide - موقع غسيل سيارات"
+    },  
+
+    category: {
+      en: "Web Design",
+      ar: "تصميم مواقع"
+    },  
+    
+    image: "images/CleanRide.png",
+
+    description: {
+      en: "A modern and responsive car wash website designed to provide a premium user experience, featuring service packages, special offers, customer testimonials, and an online booking form.",
+      ar: "موقع عصري ومتجاوب لخدمات غسيل السيارات، مصمم لتقديم تجربة مستخدم مميزة، ويحتوي على باقات الخدمات والعروض الخاصة وآراء العملاء ونموذج لحجز الخدمة."
+    },  
+    
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],  
+    
+    features: {
+      en: [
+        "Fully responsive design",
+        "Modern and clean UI",
+        "Service packages with pricing",
+        "Special offers section",
+        "Customer testimonials",
+        "Online booking form",
+        "Mobile-friendly navigation",
+        "Scroll reveal animations"
+      ],  
+      
+      ar: [
+        "تصميم متجاوب بالكامل",
+        "واجهة عصرية ونظيفة",
+        "باقات خدمات مع الأسعار",
+        "قسم للعروض الخاصة",
+        "آراء العملاء",
+        "نموذج حجز أونلاين",
+        "قائمة تنقل متوافقة مع الهواتف",
+        "تأثيرات ظهور أثناء التمرير"
+      ]  
+    },  
+
+    live: "https://mohannad-090.github.io/CleanRide/"
+  },  
 
 };
 

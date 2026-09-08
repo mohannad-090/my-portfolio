@@ -227,13 +227,13 @@ button {
 }
 
 .social-links a img {
-  width: 32px;
-  height: 32px;
   object-fit: contain;
+  filter: grayscale(1);
   transition: 0.3s ease;
 }
 
 .social-links a:hover img {
+  filter: grayscale(0);
   transform: scale(1.18) translateX(-3px);
 }
 
@@ -901,17 +901,29 @@ section {
 }
 
 .contact-socials a {
-  padding: 8px 12px;
+  padding: 12px 12px;
   border-radius: 8px;
   border: 1px solid var(--border);
   text-decoration: none;
-  font-size: 12px;
   transition: 0.3s ease;
 }
 
 .contact-socials a:hover {
   color: var(--accent);
   border-color: var(--accent);
+}
+
+.contact-socials a img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  filter: grayscale(1);
+  transition: 0.3s ease;
+}
+
+.contact-socials a:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1) translateX(-3px);
 }
 
 /* =====================================================
