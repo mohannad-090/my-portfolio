@@ -220,8 +220,8 @@ if (languageToggle) {
   ecommerce: {
 
     title: {
-      en: "E-commerce Website",
-      ar: "موقع تجارة إلكترونية"
+      en: "WLZ Store - E-Commerce Website",
+      ar: "WLZ Store - متجر إلكتروني"
     },  
     
     category: {
@@ -313,8 +313,8 @@ if (languageToggle) {
   
   decor: {
     title: {
-      en: "DECOR - Interior Design Portfolio",
-      ar: "DECOR - بورتفوليو تصميم داخلي"
+      en: "DECOR - Interior Designer Portfolio",
+      ar: "Portfolio - DECOR مهندسة ديكور"
     },
     category: {
       en: "Web Development",
