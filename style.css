@@ -227,6 +227,8 @@ button {
 }
 
 .social-links a img {
+  width: 45px;
+  height: 45px;
   object-fit: contain;
   filter: grayscale(1);
   transition: 0.3s ease;
@@ -741,6 +743,41 @@ section {
   margin-bottom: 15px;
 }
 
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.testimonial-footer h4 {
+  margin: 0;
+}
+
+.testimonial-app {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.testimonial-app img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: 0.3s ease;
+  filter: grayscale(1);
+}
+
+.testimonial-app:hover img {
+  filter: grayscale(0);
+  transform: scale(1.2);
+}
+
 /* =====================================================
    EDUCATION
 ===================================================== */
@@ -923,7 +960,7 @@ section {
 
 .contact-socials a:hover img {
   filter: grayscale(0);
-  transform: scale(1.1) translateX(-3px);
+  transform: scale(1.2);
 }
 
 /* =====================================================

@@ -528,17 +528,13 @@ const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 const submitBtn = document.getElementById("submit-btn");
 
-
-if (contactForm) {
+if (contactForm && formStatus && submitBtn) {
 
   contactForm.addEventListener("submit", async (event) => {
-
     event.preventDefault();
-
 
     const language =
       localStorage.getItem("portfolio-language") || "en";
-
 
     submitBtn.disabled = true;
 
@@ -547,7 +543,6 @@ if (contactForm) {
         ? "جاري الإرسال..."
         : "Sending...";
 
-
     formStatus.className = "form-status";
 
     formStatus.textContent =
@@ -555,44 +550,45 @@ if (contactForm) {
         ? "جاري إرسال رسالتك..."
         : "Sending your message...";
 
-
     try {
 
-      const response = await fetch(
-        contactForm.action,
-        {
-          method: "POST",
+      const formData = new FormData(contactForm);
 
-          body: new FormData(contactForm),
+      const data = Object.fromEntries(formData.entries());
 
-          headers: {
-            Accept: "application/json"
-          }
-        }
-      );
+      const response = await fetch(contactForm.action, {
+        method: "POST",
 
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
 
-      if (!response.ok) {
-        throw new Error("Submission failed");
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.message || "Submission failed"
+        );
       }
 
-
-      formStatus.className =
-        "form-status success";
+      formStatus.className = "form-status success";
 
       formStatus.textContent =
         language === "ar"
           ? "✓ تم إرسال رسالتك بنجاح، شكرًا لتواصلك معي."
           : "✓ Thanks! Your message has been sent successfully.";
 
-
       contactForm.reset();
-
 
     } catch (error) {
 
-      formStatus.className =
-        "form-status error";
+      console.error("FormSubmit Error:", error);
+
+      formStatus.className = "form-status error";
 
       formStatus.textContent =
         language === "ar"
@@ -607,11 +603,8 @@ if (contactForm) {
         language === "ar"
           ? "إرسال الرسالة"
           : "Send Message";
-
     }
-
   });
-
 }
 
 
