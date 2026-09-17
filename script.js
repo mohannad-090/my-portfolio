@@ -276,7 +276,7 @@ if (languageToggle) {
       ar: "Portfolio"
     },  
 
-    image: "images/portfolio.png",
+    image: "images/portfolio.jpg",
 
     description: {
       en: "A modern responsive portfolio website showcasing projects, skills, education, and contact information using HTML, CSS, and JavaScript.",
